@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from apps import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 
 urlpatterns = [
@@ -23,4 +25,4 @@ urlpatterns = [
     path('', views.opening, name="opeining"),
     path('map/', views.map, name="map"),
     path('diary/', views.diary, name="diary"),
-]
+]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
