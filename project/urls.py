@@ -20,7 +20,7 @@ from apps import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name="opeining"),
-    path('map/', views.about, name="map"),
-    path('diary/', views.result, name="diary"),
+    path('', views.opening, name="opeining"),
+    path('map/', views.map, name="map"),
+    path('diary/', views.diary, name="diary"),
 ]
